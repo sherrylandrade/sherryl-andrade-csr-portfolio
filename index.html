@@ -94,86 +94,82 @@
         </section>
 <!-- ================= ABOUT SECTION ================= -->
 <!-- Adjusted padding 'pt-4 pb-16' to drastically reduce the top space gap (1) -->
-<section id="page-about" class="page-viewport max-w-7xl mx-auto px-4 pt-4 pb-16">
+<!-- Main Section Container split into a Sidebar and a Content Area -->
+<div class="max-w-7xl mx-auto px-4 py-16 flex flex-col md:flex-row gap-8 items-start">
     
-    <!-- Changed 'items-start' to 'items-center' to vertically center the directory (3) relative to the profile card (2) -->
-    <!-- Removed 'mt-4' to move the entire content block up slightly (2) -->
-    <div class="flex flex-col md:flex-row gap-12 items-center">
-        
-        <!-- 1. LEFT SIDEBAR: Directory Column -->
-        <!-- Removed sticky top utility since it is now centered alongside the static block -->
-        <div class="w-full md:w-1/5 shrink-0">
-            <nav class="flex flex-col gap-4 text-xs font-mono tracking-wide text-neutral-400">
-                <a href="#about-intro" class="group flex items-center gap-2 text-white font-medium hover:text-white transition-colors">
-                    <span class="w-4 h-[1px] bg-white group-hover:w-6 transition-all"></span>
-                    Introduction
-                </a>
-                <a href="#core-services" class="group flex items-center gap-2 hover:text-white transition-colors">
-                    <span class="w-4 h-[1px] bg-neutral-700 group-hover:bg-white group-hover:w-6 transition-all"></span>
-                    Core Services
-                </a>
-                <a href="#skills-tools" class="group flex items-center gap-2 hover:text-white transition-colors">
-                    <span class="w-4 h-[1px] bg-neutral-700 group-hover:bg-white group-hover:w-6 transition-all"></span>
-                    Skills & Tools
-                </a>
-                <a href="#certificates" class="group flex items-center gap-2 hover:text-white transition-colors">
-                    <span class="w-4 h-[1px] bg-neutral-700 group-hover:bg-white group-hover:w-6 transition-all"></span>
-                    Certificates
-                </a>
-                <a href="#workstation" class="group flex items-center gap-2 hover:text-white transition-colors">
-                    <span class="w-4 h-[1px] bg-neutral-700 group-hover:bg-white group-hover:w-6 transition-all"></span>
-                    Workstation Setup
-                </a>
-            </nav>
-        </div>
-
-        <!-- 2. RIGHT SIDE: Profile Card & Main Subsections content -->
-        <div class="w-full md:w-4/5 flex flex-col">
-            
-            <!-- Profile Introduction Section Container -->
-            <div id="about-intro" class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start scroll-mt-28">
-                
-                <!-- Left Side Profile Metadata Stack -->
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-48 h-48 rounded-full bg-gradient-to-b from-neutral-800 to-neutral-950 p-1 border border-white/10 flex items-center justify-center overflow-hidden mb-6 shadow-xl">
-                        <img src="avatar.jpg" alt="Sherryl Andrade" class="w-full h-full rounded-full object-cover">
-                    </div>
-                    <h2 class="text-3xl font-bold text-white tracking-tight">Sherryl Andrade</h2>
-                    <p class="text-neutral-400 mt-2 font-medium text-sm">Customer Service Specialist:</p>
-                    <p class="text-neutral-500 font-medium text-sm">Phone & Email Support</p>
-                </div>
-
-                <!-- Right Side Professional Biography paragraphs -->
-                <div class="lg:col-span-2 space-y-6 lg:pt-4">
-                    <div>
-                        <span class="text-[10px] font-mono uppercase tracking-widest text-neutral-500 block mb-2">Professional Biography</span>
-                        <p class="text-neutral-300 text-sm md:text-base leading-relaxed font-light">
-                            Dedicated customer advocacy professional specializing in phone and email resolution metrics. Experienced across modern cloud CRM tracking suites, complex user troubleshooting trees, and maintaining record-high CSAT benchmarks.
-                        </p>
-                    </div>
-
-                    <!-- Mission & Vision Subgrids -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-white/5">
-                        <div>
-                            <h4 class="text-white text-xs font-bold flex items-center gap-2 mb-1">
-                                <i data-lucide="target" class="w-4 h-4 text-accentCyan"></i> Our Mission
-                            </h4>
-                            <p class="text-neutral-400 text-xs leading-relaxed font-light">To convert challenging technical errors and multi-channel tickets into streamlined resolution interactions using clear, empathetic voice and text support guidelines.</p>
-                        </div>
-                        <div>
-                            <h4 class="text-white text-xs font-bold flex items-center gap-2 mb-1">
-                                <i data-lucide="eye" class="w-4 h-4 text-purple-400"></i> Our Vision
-                            </h4>
-                            <p class="text-neutral-400 text-xs leading-relaxed font-light">Elevating front-line ticketing processes to maintain complete compliance, rapid case resolution, and absolute client-brand affinity.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            
-        </div>
+    <!-- 1. LEFT SIDEBAR: Independent Directory Column (Like image_36b120.jpg / image_36c89b.jpg) -->
+    <div class="w-full md:w-1/5 md:sticky md:top-28 shrink-0">
+        <nav class="flex flex-col gap-4 text-xs font-mono tracking-wide text-neutral-400">
+            <a href="#about" class="group flex items-center gap-2 text-white font-medium hover:text-white transition-colors">
+                <span class="w-4 h-[1px] bg-white group-hover:w-6 transition-all"></span>
+                Introduction
+            </a>
+            <a href="#core-services" class="group flex items-center gap-2 hover:text-white transition-colors">
+                <span class="w-4 h-[1px] bg-neutral-700 group-hover:bg-white group-hover:w-6 transition-all"></span>
+                Core Services
+            </a>
+            <a href="#skills-tools" class="group flex items-center gap-2 hover:text-white transition-colors">
+                <span class="w-4 h-[1px] bg-neutral-700 group-hover:bg-white group-hover:w-6 transition-all"></span>
+                Skills & Tools
+            </a>
+            <a href="#certificates" class="group flex items-center gap-2 hover:text-white transition-colors">
+                <span class="w-4 h-[1px] bg-neutral-700 group-hover:bg-white group-hover:w-6 transition-all"></span>
+                Certificates
+            </a>
+            <a href="#workstation" class="group flex items-center gap-2 hover:text-white transition-colors">
+                <span class="w-4 h-[1px] bg-neutral-700 group-hover:bg-white group-hover:w-6 transition-all"></span>
+                Workstation Setup
+            </a>
+        </nav>
     </div>
-</section>
+
+    <!-- 2. RIGHT SIDE: Restored Old Layout (From image_372578.png) -->
+    <div class="w-full md:w-4/5 flex flex-col gap-24">
+        
+        <!-- About / Profile Introduction Wrapper -->
+        <section id="about" class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start scroll-mt-24">
+            
+            <!-- Left Side of Profile Card: Restored Avatar Stack -->
+            <div class="flex flex-col items-center text-center">
+                <div class="w-44 h-44 rounded-full overflow-hidden border border-white/10 shadow-xl mb-4">
+                    <img src="sherryl-avatar.jpg" alt="Sherryl Andrade" class="w-full h-full object-cover">
+                </div>
+                <h2 class="text-2xl font-bold text-white tracking-tight">Sherryl Andrade</h2>
+                <p class="text-xs font-mono text-neutral-400 mt-1">Customer Service Specialist:</p>
+                <p class="text-xs text-neutral-500">Phone & Email Support</p>
+            </div>
+
+            <!-- Right Side of Profile Card: Professional Biography paragraphs -->
+            <div class="lg:col-span-2 space-y-6 lg:pt-4">
+                <div>
+                    <span class="text-[10px] font-mono uppercase tracking-widest text-neutral-500 block mb-2">Professional Biography</span>
+                    <p class="text-neutral-300 text-sm md:text-base leading-relaxed font-light">
+                        Dedicated customer advocacy professional specializing in phone and email resolution metrics. Experienced across modern cloud CRM tracking suites, complex user troubleshooting trees, and maintaining record-high CSAT benchmarks.
+                    </p>
+                </div>
+
+                <!-- Mission & Vision Subgrids -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-white/5">
+                    <div>
+                        <h4 class="text-white text-xs font-bold flex items-center gap-2 mb-1">
+                            <i data-lucide="target" class="w-4 h-4 text-accentCyan"></i> Our Mission
+                        </h4>
+                        <p class="text-neutral-400 text-xs leading-relaxed font-light">To convert challenging technical errors and multi-channel tickets into streamlined resolution interactions using clear, empathetic voice and text support guidelines.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-xs font-bold flex items-center gap-2 mb-1">
+                            <i data-lucide="eye" class="w-4 h-4 text-purple-400"></i> Our Vision
+                        </h4>
+                        <p class="text-neutral-400 text-xs leading-relaxed font-light">Elevating front-line ticketing processes to maintain complete compliance, rapid case resolution, and absolute client-brand affinity.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Other sections here (e.g., core-services, skills-tools, etc.) with matching IDs -->
+    </div>
+</div>
 </div>
     </div>
 
