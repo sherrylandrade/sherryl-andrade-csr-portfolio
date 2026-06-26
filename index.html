@@ -93,16 +93,13 @@
             </div>
         </section>
 <!-- ================= ABOUT SECTION ================= -->
-<!-- 1. Increased top padding (pt-24) to create a spacious gap at the top (1) -->
-<section id="page-about" class="page-viewport max-w-7xl mx-auto px-4 pt-24 pb-16">
+<section id="page-about" class="page-viewport max-w-7xl mx-auto px-4 pt-4 pb-16">
     
-    <!-- 2. Changed 'items-start' to 'md:items-center' so the sidebar (2) is vertically centered relative to the content (4) -->
-    <!-- 3. Increased 'gap-12' to 'md:gap-20' to widen the horizontal space gap (3) -->
-    <div class="flex flex-col md:flex-row gap-12 md:gap-20 md:items-center">
+    <!-- Using items-start keeps the sticky/centered tracking smooth as content grows -->
+    <div class="flex flex-col md:flex-row gap-12 items-start">
         
         <!-- 1. LEFT SIDEBAR: Directory Column -->
-        <!-- Removed 'md:sticky' since it's now vertically centered within the parent row -->
-        <div class="w-full md:w-1/5 shrink-0">
+        <div class="w-full md:w-1/5 shrink-0 md:sticky md:top-28">
             <nav class="flex flex-col gap-4 text-xs font-mono tracking-wide text-neutral-400">
                 <a href="#about-intro" class="group flex items-center gap-2 text-white font-medium hover:text-white transition-colors">
                     <span class="w-4 h-[1px] bg-white group-hover:w-6 transition-all"></span>
@@ -127,9 +124,8 @@
             </nav>
         </div>
 
-        <!-- 2. RIGHT SIDE: Profile Card & Main Subsections content -->
-        <!-- 4. Added md:-translate-y-4 and md:-translate-x-4 to shift section 4 slightly up and left -->
-        <div class="w-full md:w-4/5 flex flex-col space-y-16 transform md:-translate-y-4 md:-translate-x-4">
+        <!-- 2. RIGHT SIDE: Profile Card & Main Subsections content wrapped with uniform space-y-16 for spacing -->
+        <div class="w-full md:w-4/5 flex flex-col space-y-16">
             
             <!-- Subsection 1: About Intro -->
             <div id="about-intro" class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start scroll-mt-28">
