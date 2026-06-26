@@ -93,348 +93,331 @@
             </div>
         </section>
 <!-- ================= ABOUT SECTION ================= -->
-<!-- Adjusted padding 'pt-4 pb-16' to drastically reduce the top space gap (1) -->
-<!-- Main Section Container split into a Sidebar and a Content Area -->
-<div class="max-w-7xl mx-auto px-4 py-16 flex flex-col md:flex-row gap-8 items-start">
-    
-    <!-- 1. LEFT SIDEBAR: Independent Directory Column (Like image_36b120.jpg / image_36c89b.jpg) -->
-    <div class="w-full md:w-1/5 md:sticky md:top-28 shrink-0">
-        <nav class="flex flex-col gap-4 text-xs font-mono tracking-wide text-neutral-400">
-            <a href="#about" class="group flex items-center gap-2 text-white font-medium hover:text-white transition-colors">
-                <span class="w-4 h-[1px] bg-white group-hover:w-6 transition-all"></span>
-                Introduction
-            </a>
-            <a href="#core-services" class="group flex items-center gap-2 hover:text-white transition-colors">
-                <span class="w-4 h-[1px] bg-neutral-700 group-hover:bg-white group-hover:w-6 transition-all"></span>
-                Core Services
-            </a>
-            <a href="#skills-tools" class="group flex items-center gap-2 hover:text-white transition-colors">
-                <span class="w-4 h-[1px] bg-neutral-700 group-hover:bg-white group-hover:w-6 transition-all"></span>
-                Skills & Tools
-            </a>
-            <a href="#certificates" class="group flex items-center gap-2 hover:text-white transition-colors">
-                <span class="w-4 h-[1px] bg-neutral-700 group-hover:bg-white group-hover:w-6 transition-all"></span>
-                Certificates
-            </a>
-            <a href="#workstation" class="group flex items-center gap-2 hover:text-white transition-colors">
-                <span class="w-4 h-[1px] bg-neutral-700 group-hover:bg-white group-hover:w-6 transition-all"></span>
-                Workstation Setup
-            </a>
-        </nav>
-    </div>
-
-    <!-- 2. RIGHT SIDE: Restored Old Layout (From image_372578.png) -->
-    <div class="w-full md:w-4/5 flex flex-col gap-24">
         
-        <!-- About / Profile Introduction Wrapper -->
-        <section id="about" class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start scroll-mt-24">
+<section id="page-about" class="page-viewport max-w-7xl mx-auto px-4 pt-4 pb-16">
+    
+    <!-- Using items-start keeps the sticky/centered tracking smooth as content grows -->
+    <div class="flex flex-col md:flex-row gap-12 items-start">
+        
+        <!-- 1. LEFT SIDEBAR: Directory Column -->
+        <div class="w-full md:w-1/5 shrink-0 md:sticky md:top-28">
+            <nav class="flex flex-col gap-4 text-xs font-mono tracking-wide text-neutral-400">
+                <a href="#about-intro" class="group flex items-center gap-2 text-white font-medium hover:text-white transition-colors">
+                    <span class="w-4 h-[1px] bg-white group-hover:w-6 transition-all"></span>
+                    Introduction
+                </a>
+                <a href="#core-services" class="group flex items-center gap-2 hover:text-white transition-colors">
+                    <span class="w-4 h-[1px] bg-neutral-700 group-hover:bg-white group-hover:w-6 transition-all"></span>
+                    Core Services
+                </a>
+                <a href="#skills-tools" class="group flex items-center gap-2 hover:text-white transition-colors">
+                    <span class="w-4 h-[1px] bg-neutral-700 group-hover:bg-white group-hover:w-6 transition-all"></span>
+                    Skills & Tools
+                </a>
+                <a href="#certificates" class="group flex items-center gap-2 hover:text-white transition-colors">
+                    <span class="w-4 h-[1px] bg-neutral-700 group-hover:bg-white group-hover:w-6 transition-all"></span>
+                    Certificates
+                </a>
+                <a href="#workstation" class="group flex items-center gap-2 hover:text-white transition-colors">
+                    <span class="w-4 h-[1px] bg-neutral-700 group-hover:bg-white group-hover:w-6 transition-all"></span>
+                    Workstation Setup
+                </a>
+            </nav>
+        </div>
+
+        <!-- 2. RIGHT SIDE: Profile Card & Main Subsections content wrapped with uniform space-y-16 for spacing -->
+        <div class="w-full md:w-4/5 flex flex-col space-y-16">
             
-            <!-- Left Side of Profile Card: Restored Avatar Stack -->
-            <div class="flex flex-col items-center text-center">
-                <div class="w-44 h-44 rounded-full overflow-hidden border border-white/10 shadow-xl mb-4">
-                    <img src="sherryl-avatar.jpg" alt="Sherryl Andrade" class="w-full h-full object-cover">
+            <!-- Subsection 1: About Intro -->
+            <div id="about-intro" class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start scroll-mt-28">
+                <!-- Left Side Profile Metadata Stack -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-48 h-48 rounded-full bg-gradient-to-b from-neutral-800 to-neutral-950 p-1 border border-white/10 flex items-center justify-center overflow-hidden mb-6 shadow-xl">
+                        <img src="avatar.jpg" alt="Sherryl Andrade" class="w-full h-full rounded-full object-cover">
+                    </div>
+                    <h2 class="text-3xl font-bold text-white tracking-tight">Sherryl Andrade</h2>
+                    <p class="text-neutral-400 mt-2 font-medium text-sm">Customer Service Specialist:</p>
+                    <p class="text-neutral-500 font-medium text-sm">Phone & Email Support</p>
                 </div>
-                <h2 class="text-2xl font-bold text-white tracking-tight">Sherryl Andrade</h2>
-                <p class="text-xs font-mono text-neutral-400 mt-1">Customer Service Specialist:</p>
-                <p class="text-xs text-neutral-500">Phone & Email Support</p>
+
+                <!-- Right Side Professional Biography paragraphs -->
+                <div class="lg:col-span-2 space-y-6 lg:pt-4">
+                    <div>
+                        <span class="text-[10px] font-mono uppercase tracking-widest text-neutral-500 block mb-2">Professional Biography</span>
+                        <p class="text-neutral-300 text-sm md:text-base leading-relaxed font-light">
+                            Dedicated customer advocacy professional specializing in phone and email resolution metrics. Experienced across modern cloud CRM tracking suites, complex user troubleshooting trees, and maintaining record-high CSAT benchmarks.
+                        </p>
+                    </div>
+
+                    <!-- Mission & Vision Subgrids -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-white/5">
+                        <div>
+                            <h4 class="text-white text-xs font-bold flex items-center gap-2 mb-1">
+                                <i data-lucide="target" class="w-4 h-4 text-accentCyan"></i> Our Mission
+                            </h4>
+                            <p class="text-neutral-400 text-xs leading-relaxed font-light">To convert challenging technical errors and multi-channel tickets into streamlined resolution interactions using clear, empathetic voice and text support guidelines.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-white text-xs font-bold flex items-center gap-2 mb-1">
+                                <i data-lucide="eye" class="w-4 h-4 text-purple-400"></i> Our Vision
+                            </h4>
+                            <p class="text-neutral-400 text-xs leading-relaxed font-light">Elevating front-line ticketing processes to maintain complete compliance, rapid case resolution, and absolute client-brand affinity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="border-white/5">
+
+            <!-- Subsection 2: Core Services Matrix -->
+            <div id="core-services" class="scroll-mt-28">
+                <span class="text-xs font-mono uppercase tracking-widest text-neutral-500 block mb-6">Core Services Matrix</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-neutral-900/40 border border-white/5 rounded-xl p-5 hover:border-white/10 transition-colors">
+                        <i data-lucide="phone" class="w-5 h-5 text-accentCyan mb-3"></i>
+                        <h3 class="text-white font-semibold mb-1">Inbound & Outbound Phone Support</h3>
+                        <p class="text-neutral-400 text-sm font-light leading-relaxed">Real-time troubleshooting, queue management, call standard adherence, and rapid ticket initialization.</p>
+                    </div>
+                    <div class="bg-neutral-900/40 border border-white/5 rounded-xl p-5 hover:border-white/10 transition-colors">
+                        <i data-lucide="mail" class="w-5 h-5 text-accentCyan mb-3"></i>
+                        <h3 class="text-white font-semibold mb-1">Email Ticketing & Async Resolution</h3>
+                        <p class="text-neutral-400 text-sm font-light leading-relaxed">Clear technical documentation responses, macro-driven compliance, and deep case file logging updates.</p>
+                    </div>
+                    <div class="bg-neutral-900/40 border border-white/5 rounded-xl p-5 hover:border-white/10 transition-colors">
+                        <i data-lucide="shield-check" class="w-5 h-5 text-accentCyan mb-3"></i>
+                        <h3 class="text-white font-semibold mb-1">Account Security Verification</h3>
+                        <p class="text-neutral-400 text-sm font-light leading-relaxed">Managing client record balances, authorization protocol overrides, and strict data privacy compliance rules.</p>
+                    </div>
+                    <div class="bg-neutral-900/40 border border-white/5 rounded-xl p-5 hover:border-white/10 transition-colors">
+                        <i data-lucide="cpu" class="w-5 h-5 text-accentCyan mb-3"></i>
+                        <h3 class="text-white font-semibold mb-1">CRM Technical Troubleshooting</h3>
+                        <p class="text-neutral-400 text-sm font-light leading-relaxed">System workflow mastery across Zendesk, Kustomer, Stripe billing portals, and database search queries.</p>
+                    </div>
+                </div>
             </div>
 
-            <!-- Right Side of Profile Card: Professional Biography paragraphs -->
-            <div class="lg:col-span-2 space-y-6 lg:pt-4">
-                <div>
-                    <span class="text-[10px] font-mono uppercase tracking-widest text-neutral-500 block mb-2">Professional Biography</span>
-                    <p class="text-neutral-300 text-sm md:text-base leading-relaxed font-light">
-                        Dedicated customer advocacy professional specializing in phone and email resolution metrics. Experienced across modern cloud CRM tracking suites, complex user troubleshooting trees, and maintaining record-high CSAT benchmarks.
+            <hr class="border-white/5">
+
+            <!-- Subsection 3: Skills & Tools -->
+            <div id="skills-tools" class="grid grid-cols-1 md:grid-cols-2 gap-8 scroll-mt-28">
+                <div class="bg-neutral-900/20 border border-white/5 rounded-2xl p-6">
+                    <span class="text-xs font-mono uppercase tracking-widest text-neutral-500 block mb-6">Skills</span>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Attention To Detail</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Calls Handling - Inbound</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Calls Handling - Outbound</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Chat Support</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Customer Management</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Customer Support</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Email Support</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Escalations Management</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Files/Documents Management</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Leadership</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Phone Support</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Positive Scripting</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Project Coordination</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Project Documentation</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Quality Assurance</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Sales</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Technical Support</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Troubleshooting</span>
+                    </div>
+                </div>
+
+                <div class="bg-neutral-900/20 border border-white/5 rounded-2xl p-6">
+                    <span class="text-xs font-mono uppercase tracking-widest text-neutral-500 block mb-6">Tools</span>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Aircall</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Asana</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Basecamp</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">CRM</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Drive</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Excel</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">GMeet</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Gmail</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Google Calendar</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Google Chat</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Google Sheets</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Google Workspace</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Gorgias</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Hubspot</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Salesforce</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Shopify</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Slack</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">WhatsApp</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Workday</span>
+                        <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Zendesk</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-white/5">
+
+            <!-- Subsection 4: Certificates -->
+            <div id="certificates" class="scroll-mt-28">
+                <!-- Verified Power User Badge Milestone Header Banner -->
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4 bg-gradient-to-r from-purple-950/30 to-neutral-900/40 border border-white/5 rounded-2xl p-6 mb-8">
+                    <div class="w-20 h-20 shrink-0 bg-neutral-950/50 rounded-xl p-2 border border-white/10 flex items-center justify-center">
+                        <img src="verified ClickUp power badge.png" alt="Verified ClickUp Power User" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <span class="text-xs font-mono uppercase tracking-widest text-accentCyan block mb-1">Platform Verification</span>
+                        <h3 class="text-xl font-bold text-white tracking-tight">Verified ClickUp Power User</h3>
+                        <p class="text-neutral-400 text-sm font-light leading-relaxed mt-0.5">Officially authenticated structural automation setups across active workspaces.</p>
+                    </div>
+                </div>
+
+                <span class="text-xs font-mono uppercase tracking-widest text-neutral-500 block mb-6">Certificates</span>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Cert 1: ClickUp Advanced AI -->
+                    <div class="bg-neutral-900/40 border border-white/5 rounded-xl p-5 flex flex-col justify-between">
+                        <div>
+                            <div class="w-full aspect-[4/3] rounded-lg bg-neutral-950 border border-white/10 mb-4 overflow-hidden">
+                                <img src="ai-skills.png" alt="ClickUp Advanced AI Certificate Thumbnail" class="w-full h-full object-cover">
+                            </div>
+                            <h4 class="text-white font-medium text-base leading-tight">ClickUp Advanced AI Certificate of Completion</h4>
+                            <p class="text-neutral-400 text-xs mt-1">Issued May 2026</p>
+                        </div>
+                        <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-xs font-mono text-neutral-500">
+                            <span>ID: <span class="text-neutral-300">arvrzh4t4npe</span></span>
+                            <a href="https://verify.skilljar.com/c/arvrzh4t4npe" target="_blank" class="text-accentCyan hover:underline flex items-center gap-1">Verify <i data-lucide="external-link" class="w-3 h-3"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Cert 2: Intermediate Workflow -->
+                    <div class="bg-neutral-900/40 border border-white/5 rounded-xl p-5 flex flex-col justify-between">
+                        <div>
+                            <div class="w-full aspect-[4/3] rounded-lg bg-neutral-950 border border-white/10 mb-4 overflow-hidden">
+                                <img src="intermediate.png" alt="Build Your First Workflow Intermediate Thumbnail" class="w-full h-full object-cover">
+                            </div>
+                            <h4 class="text-white font-medium text-base leading-tight">Build Your First Workflow (Intermediate)</h4>
+                            <p class="text-neutral-400 text-xs mt-1">Issued May 2026</p>
+                        </div>
+                        <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-xs font-mono text-neutral-500">
+                            <span>ID: <span class="text-neutral-300">5cz5u5rsbpyf</span></span>
+                            <a href="https://verify.skilljar.com/c/5cz5u5rsbpyf" target="_blank" class="text-accentCyan hover:underline flex items-center gap-1">Verify <i data-lucide="external-link" class="w-3 h-3"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Cert 3: ClickUp Novice -->
+                    <div class="bg-neutral-900/40 border border-white/5 rounded-xl p-5 flex flex-col justify-between">
+                        <div>
+                            <div class="w-full aspect-[4/3] rounded-lg bg-neutral-950 border border-white/10 mb-4 overflow-hidden">
+                                <img src="novice.png" alt="ClickUp Novice Certificate Thumbnail" class="w-full h-full object-cover">
+                            </div>
+                            <h4 class="text-white font-medium text-base leading-tight">ClickUp Novice Certificate of Completion</h4>
+                            <p class="text-neutral-400 text-xs mt-1">Issued May 2026</p>
+                        </div>
+                        <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-xs font-mono text-neutral-500">
+                            <span>ID: <span class="text-neutral-300">7y9c8oxhadq2</span></span>
+                            <a href="https://verify.skilljar.com/c/7y9c8oxhadq2" target="_blank" class="text-accentCyan hover:underline flex items-center gap-1">Verify <i data-lucide="external-link" class="w-3 h-3"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-white/5">
+
+            <!-- Subsection 5: Workstation Setup -->
+            <div id="workstation" class="scroll-mt-28">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+                    <div>
+                        <span class="text-xs font-mono uppercase tracking-widest text-accentCyan block mb-2">Workstation Setup</span>
+                        <h2 class="text-3xl font-bold text-white tracking-tight">Technical Infrastructure</h2>
+                    </div>
+                    <p class="text-neutral-400 text-sm max-w-md font-light leading-relaxed md:text-right">
+                        High-availability production environment configured for uninterrupted uptime, low-latency communication networks, and reliable workflow execution data.
                     </p>
                 </div>
 
-                <!-- Mission & Vision Subgrids -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-white/5">
-                    <div>
-                        <h4 class="text-white text-xs font-bold flex items-center gap-2 mb-1">
-                            <i data-lucide="target" class="w-4 h-4 text-accentCyan"></i> Our Mission
-                        </h4>
-                        <p class="text-neutral-400 text-xs leading-relaxed font-light">To convert challenging technical errors and multi-channel tickets into streamlined resolution interactions using clear, empathetic voice and text support guidelines.</p>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="lg:col-span-1 bg-neutral-900/40 border border-white/5 rounded-2xl p-4 flex flex-col justify-between">
+                        <div class="relative aspect-[4/3] w-full bg-neutral-950 rounded-xl overflow-x-auto snap-x snap-mandatory flex items-center scrollbar-thin scrollbar-thumb-white/10">
+                            <div class="snap-center shrink-0 w-full h-full p-1">
+                                <img src="System Specs-1.JPG" alt="OS Specifications Benchmark Card 1" class="w-full h-full object-cover rounded-lg opacity-80">
+                            </div>
+                            <div class="snap-center shrink-0 w-full h-full p-1">
+                                <img src="System Specs-2.JPG" alt="OS Specifications Benchmark Card 2" class="w-full h-full object-cover rounded-lg opacity-80">
+                            </div>
+                            <div class="snap-center shrink-0 w-full h-full p-1">
+                                <img src="Speed Test 6-22-2026.jpg" alt="Starlink ISP Speed Verification Metrics" class="w-full h-full object-cover rounded-lg opacity-80">
+                            </div>
+                            <div class="snap-center shrink-0 w-full h-full p-1">
+                                <img src="HomeOffice1.jpg" alt="Sherryl Andrade Workstation Setup - Desk Overview" class="w-full h-full object-cover rounded-lg opacity-80">
+                            </div>
+                            <div class="snap-center shrink-0 w-full h-full p-1">
+                                <img src="HomeOffice2.jpg" alt="Sherryl Andrade Workstation Setup - Workspace Alternate" class="w-full h-full object-cover rounded-lg opacity-80">
+                            </div>
+                            <div class="snap-center shrink-0 w-full h-full p-1">
+                                <img src="HomeOffice3.jpg" alt="Sherryl Andrade Workstation Setup - Desktop Context" class="w-full h-full object-cover rounded-lg opacity-80">
+                            </div>
+                            <div class="snap-center shrink-0 w-full h-full p-1">
+                                <img src="HeadSetWithNoiseCancelling1.jpg" alt="Audio Peripheral Setup - Primary" class="w-full h-full object-cover rounded-lg opacity-80">
+                            </div>
+                            <div class="snap-center shrink-0 w-full h-full p-1">
+                                <img src="HeadSetWithNoiseCancelling2.jpg" alt="Audio Peripheral Setup - Detail View" class="w-full h-full object-cover rounded-lg opacity-80">
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-center gap-1.5 mt-3 text-[10px] font-mono uppercase tracking-wider text-neutral-500">
+                            <i data-lucide="move-horizontal" class="w-3 h-3 text-accentCyan"></i>
+                            <span>Swipe or Scroll horizontally to view setup images</span>
+                        </div>
+
+                        <p class="text-neutral-400 text-xs font-light leading-relaxed mt-3 text-center px-2">
+                            Monitored workstation architecture running active desktop process isolation matrix and high-fidelity voice parameters.
+                        </p>
                     </div>
-                    <div>
-                        <h4 class="text-white text-xs font-bold flex items-center gap-2 mb-1">
-                            <i data-lucide="eye" class="w-4 h-4 text-purple-400"></i> Our Vision
-                        </h4>
-                        <p class="text-neutral-400 text-xs leading-relaxed font-light">Elevating front-line ticketing processes to maintain complete compliance, rapid case resolution, and absolute client-brand affinity.</p>
+
+                    <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-neutral-900/20 border border-white/5 rounded-xl p-5">
+                            <div class="flex items-center gap-3 text-white font-medium mb-3">
+                                <i data-lucide="settings" class="w-4 h-4 text-neutral-400"></i>
+                                <span>System Specifications</span>
+                            </div>
+                            <ul class="space-y-1.5 text-sm text-neutral-400 font-light">
+                                <li>• <strong class="text-neutral-300 font-medium">OS:</strong> Windows 11 System</li>
+                                <li>• <strong class="text-neutral-300 font-medium">CPU:</strong> Intel i5-9300H (2.40 GHz)</li>
+                                <li>• <strong class="text-neutral-300 font-medium">RAM:</strong> 12GB Capacity</li>
+                            </ul>
+                        </div>
+                        <div class="bg-neutral-900/20 border border-white/5 rounded-xl p-5">
+                            <div class="flex items-center gap-3 text-white font-medium mb-3">
+                                <i data-lucide="wifi" class="w-4 h-4 text-neutral-400"></i>
+                                <span>Primary Network Link</span>
+                            </div>
+                            <ul class="space-y-1.5 text-sm text-neutral-400 font-light">
+                                <li>• <strong class="text-neutral-300 font-medium">Link:</strong> Starlink Satellite</li>
+                                <li>• <strong class="text-neutral-300 font-medium">Speed:</strong> 100+ Mbps Dn / 25+ Up</li>
+                                <li>• <strong class="text-neutral-300 font-medium">Core:</strong> Wired Ethernet Connection</li>
+                            </ul>
+                        </div>
+                        <div class="bg-neutral-900/20 border border-white/5 rounded-xl p-5">
+                            <div class="flex items-center gap-3 text-white font-medium mb-3">
+                                <i data-lucide="headphones" class="w-4 h-4 text-neutral-400"></i>
+                                <span>Audio Peripherals</span>
+                            </div>
+                            <ul class="space-y-1.5 text-sm text-neutral-400 font-light">
+                                <li>• <strong class="text-neutral-300 font-medium">Hardware:</strong> Onikuma X15 Headset</li>
+                                <li>• <strong class="text-neutral-300 font-medium">Mic:</strong> HD Noise Reduction Microphone</li>
+                            </ul>
+                        </div>
+                        <div class="bg-neutral-900/20 border border-white/5 rounded-xl p-5">
+                            <div class="flex items-center gap-3 text-white font-medium mb-3">
+                                <i data-lucide="battery-charging" class="w-4 h-4 text-neutral-400"></i>
+                                <span>Failover Redundancies</span>
+                            </div>
+                            <ul class="space-y-1.5 text-sm text-neutral-400 font-light">
+                                <li>• <strong class="text-neutral-300 font-medium">Power Backup:</strong> Bluetti EB70 Power Supply</li>
+                                <li>• <strong class="text-neutral-300 font-medium">Backup Net:</strong> Mobile Hotspot Standby</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
-        </section>
-
-        <!-- Other sections here (e.g., core-services, skills-tools, etc.) with matching IDs -->
-    </div>
-</div>
-</div>
-    </div>
-
-    <hr class="border-white/5">
-
-    <div>
-        <span class="text-xs font-mono uppercase tracking-widest text-neutral-500 block mb-6">Core Services Matrix</span>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-neutral-900/40 border border-white/5 rounded-xl p-5 hover:border-white/10 transition-colors">
-                <i data-lucide="phone" class="w-5 h-5 text-accentCyan mb-3"></i>
-                <h3 class="text-white font-semibold mb-1">Inbound & Outbound Phone Support</h3>
-                <p class="text-neutral-400 text-sm font-light leading-relaxed">Real-time troubleshooting, queue management, call standard adherence, and rapid ticket initialization.</p>
-            </div>
-            <div class="bg-neutral-900/40 border border-white/5 rounded-xl p-5 hover:border-white/10 transition-colors">
-                <i data-lucide="mail" class="w-5 h-5 text-accentCyan mb-3"></i>
-                <h3 class="text-white font-semibold mb-1">Email Ticketing & Async Resolution</h3>
-                <p class="text-neutral-400 text-sm font-light leading-relaxed">Clear technical documentation responses, macro-driven compliance, and deep case file logging updates.</p>
-            </div>
-            <div class="bg-neutral-900/40 border border-white/5 rounded-xl p-5 hover:border-white/10 transition-colors">
-                <i data-lucide="shield-check" class="w-5 h-5 text-accentCyan mb-3"></i>
-                <h3 class="text-white font-semibold mb-1">Account Security Verification</h3>
-                <p class="text-neutral-400 text-sm font-light leading-relaxed">Managing client record balances, authorization protocol overrides, and strict data privacy compliance rules.</p>
-            </div>
-            <div class="bg-neutral-900/40 border border-white/5 rounded-xl p-5 hover:border-white/10 transition-colors">
-                <i data-lucide="cpu" class="w-5 h-5 text-accentCyan mb-3"></i>
-                <h3 class="text-white font-semibold mb-1">CRM Technical Troubleshooting</h3>
-                <p class="text-neutral-400 text-sm font-light leading-relaxed">System workflow mastery across Zendesk, Kustomer, Stripe billing portals, and database search queries.</p>
-            </div>
-        </div>
-    </div>
-
-    <hr class="border-white/5">
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-neutral-900/20 border border-white/5 rounded-2xl p-6">
-            <span class="text-xs font-mono uppercase tracking-widest text-neutral-500 block mb-6">Skills</span>
-            <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Attention To Detail</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Calls Handling - Inbound</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Calls Handling - Outbound</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Chat Support</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Customer Management</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Customer Support</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Email Support</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Escalations Management</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Files/Documents Management</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Leadership</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Phone Support</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Positive Scripting</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Project Coordination</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Project Documentation</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Quality Assurance</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Sales</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Technical Support</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Troubleshooting</span>
-            </div>
-        </div>
-
-        <div class="bg-neutral-900/20 border border-white/5 rounded-2xl p-6">
-            <span class="text-xs font-mono uppercase tracking-widest text-neutral-500 block mb-6">Tools</span>
-            <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Aircall</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Asana</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Basecamp</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">CRM</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Drive</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Excel</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">GMeet</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Gmail</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Google Calendar</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Google Chat</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Google Sheets</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Google Workspace</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Gorgias</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Hubspot</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Salesforce</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Shopify</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Slack</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">WhatsApp</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Workday</span>
-                <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-full text-xs text-neutral-300">Zendesk</span>
-            </div>
-        </div>
-    </div>
-
-    <hr class="border-white/5">
-
-    <!-- Professional Certificates Layout -->
-    <div>
-        <!-- Verified Power User Badge Milestone Header Banner -->
-        <div class="flex flex-col sm:flex-row sm:items-center gap-4 bg-gradient-to-r from-purple-950/30 to-neutral-900/40 border border-white/5 rounded-2xl p-6 mb-8">
-            <div class="w-20 h-20 shrink-0 bg-neutral-950/50 rounded-xl p-2 border border-white/10 flex items-center justify-center">
-                <img src="verified ClickUp power badge.png" alt="Verified ClickUp Power User" class="w-full h-full object-contain">
-            </div>
-            <div>
-                <span class="text-xs font-mono uppercase tracking-widest text-accentCyan block mb-1">Platform Verification</span>
-                <h3 class="text-xl font-bold text-white tracking-tight">Verified ClickUp Power User</h3>
-                <p class="text-neutral-400 text-sm font-light leading-relaxed mt-0.5">Officially authenticated structural automation setups across active workspaces.</p>
-            </div>
-        </div>
-
-        <span class="text-xs font-mono uppercase tracking-widest text-neutral-500 block mb-6">Certificates</span>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            
-            <!-- Cert 1: ClickUp Advanced AI -->
-            <div class="bg-neutral-900/40 border border-white/5 rounded-xl p-5 flex flex-col justify-between">
-                <div>
-                    <!-- Replaced 'CU' placeholder box with asset thumbnail -->
-                    <div class="w-full aspect-[4/3] rounded-lg bg-neutral-950 border border-white/10 mb-4 overflow-hidden">
-                        <img src="ai-skills.png" alt="ClickUp Advanced AI Certificate Thumbnail" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="text-white font-medium text-base leading-tight">ClickUp Advanced AI Certificate of Completion</h4>
-                    <p class="text-neutral-400 text-xs mt-1">Issued May 2026</p>
-                </div>
-                <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-xs font-mono text-neutral-500">
-                    <span>ID: <span class="text-neutral-300">arvrzh4t4npe</span></span>
-                    <a href="https://verify.skilljar.com/c/arvrzh4t4npe" target="_blank" class="text-accentCyan hover:underline flex items-center gap-1">Verify <i data-lucide="external-link" class="w-3 h-3"></i></a>
-                </div>
-            </div>
-
-            <!-- Cert 2: Intermediate Workflow -->
-            <div class="bg-neutral-900/40 border border-white/5 rounded-xl p-5 flex flex-col justify-between">
-                <div>
-                    <!-- Replaced 'CU' placeholder box with asset thumbnail -->
-                    <div class="w-full aspect-[4/3] rounded-lg bg-neutral-950 border border-white/10 mb-4 overflow-hidden">
-                        <img src="intermediate.png" alt="Build Your First Workflow Intermediate Thumbnail" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="text-white font-medium text-base leading-tight">Build Your First Workflow (Intermediate)</h4>
-                    <p class="text-neutral-400 text-xs mt-1">Issued May 2026</p>
-                </div>
-                <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-xs font-mono text-neutral-500">
-                    <span>ID: <span class="text-neutral-300">5cz5u5rsbpyf</span></span>
-                    <a href="https://verify.skilljar.com/c/5cz5u5rsbpyf" target="_blank" class="text-accentCyan hover:underline flex items-center gap-1">Verify <i data-lucide="external-link" class="w-3 h-3"></i></a>
-                </div>
-            </div>
-
-            <!-- Cert 3: ClickUp Novice -->
-            <div class="bg-neutral-900/40 border border-white/5 rounded-xl p-5 flex flex-col justify-between">
-                <div>
-                    <!-- Replaced 'CU' placeholder box with asset thumbnail -->
-                    <div class="w-full aspect-[4/3] rounded-lg bg-neutral-950 border border-white/10 mb-4 overflow-hidden">
-                        <img src="novice.png" alt="ClickUp Novice Certificate Thumbnail" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="text-white font-medium text-base leading-tight">ClickUp Novice Certificate of Completion</h4>
-                    <p class="text-neutral-400 text-xs mt-1">Issued May 2026</p>
-                </div>
-                <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-xs font-mono text-neutral-500">
-                    <span>ID: <span class="text-neutral-300">7y9c8oxhadq2</span></span>
-                    <a href="https://verify.skilljar.com/c/7y9c8oxhadq2" target="_blank" class="text-accentCyan hover:underline flex items-center gap-1">Verify <i data-lucide="external-link" class="w-3 h-3"></i></a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <hr class="border-white/5">
-
-<!-- Workstation Setup Technical Infrastructure -->
-    <div>
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
-            <div>
-                <span class="text-xs font-mono uppercase tracking-widest text-accentCyan block mb-2">Workstation Setup</span>
-                <h2 class="text-3xl font-bold text-white tracking-tight">Technical Infrastructure</h2>
-            </div>
-            <p class="text-neutral-400 text-sm max-w-md font-light leading-relaxed md:text-right">
-                High-availability production environment configured for uninterrupted uptime, low-latency communication networks, and reliable workflow execution data.
-            </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <!-- Hardware Multi-Image Scroll Gallery Container -->
-            <div class="lg:col-span-1 bg-neutral-900/40 border border-white/5 rounded-2xl p-4 flex flex-col justify-between">
-                <!-- Smooth horizontal gallery tracking your assets list -->
-                <div class="relative aspect-[4/3] w-full bg-neutral-950 rounded-xl overflow-x-auto snap-x snap-mandatory flex items-center scrollbar-thin scrollbar-thumb-white/10">
-                    <div class="snap-center shrink-0 w-full h-full p-1">
-                    <!-- Changed extension to uppercase .JPG -->
-                        <img src="System Specs-1.JPG" alt="OS Specifications Benchmark Card 1" class="w-full h-full object-cover rounded-lg opacity-80">
-                    </div>
-                    <div class="snap-center shrink-0 w-full h-full p-1">
-                    <!-- Changed extension to uppercase .JPG -->
-                        <img src="System Specs-2.JPG" alt="OS Specifications Benchmark Card 2" class="w-full h-full object-cover rounded-lg opacity-80">
-                    </div>
-                    <div class="snap-center shrink-0 w-full h-full p-1">
-                        <img src="Speed Test 6-22-2026.jpg" alt="Starlink ISP Speed Verification Metrics" class="w-full h-full object-cover rounded-lg opacity-80">
-                    </div>
-                    <div class="snap-center shrink-0 w-full h-full p-1">
-                        <img src="HomeOffice1.jpg" alt="Sherryl Andrade Workstation Setup - Desk Overview" class="w-full h-full object-cover rounded-lg opacity-80">
-                    </div>
-                    <div class="snap-center shrink-0 w-full h-full p-1">
-                        <img src="HomeOffice2.jpg" alt="Sherryl Andrade Workstation Setup - Workspace Alternate" class="w-full h-full object-cover rounded-lg opacity-80">
-                    </div>
-                    <div class="snap-center shrink-0 w-full h-full p-1">
-                        <img src="HomeOffice3.jpg" alt="Sherryl Andrade Workstation Setup - Desktop Context" class="w-full h-full object-cover rounded-lg opacity-80">
-                    </div>
-                    <div class="snap-center shrink-0 w-full h-full p-1">
-                        <img src="HeadSetWithNoiseCancelling1.jpg" alt="Audio Peripheral Setup - Primary" class="w-full h-full object-cover rounded-lg opacity-80">
-                    </div>
-                    <div class="snap-center shrink-0 w-full h-full p-1">
-                        <img src="HeadSetWithNoiseCancelling2.jpg" alt="Audio Peripheral Setup - Detail View" class="w-full h-full object-cover rounded-lg opacity-80">
-                    </div>
-                    
-                </div>
-                
-                <!-- Explicit interaction helper indicator -->
-                <div class="flex items-center justify-center gap-1.5 mt-3 text-[10px] font-mono uppercase tracking-wider text-neutral-500">
-                    <i data-lucide="move-horizontal" class="w-3 h-3 text-accentCyan"></i>
-                    <span>Swipe or Scroll horizontally to view setup images</span>
-                </div>
-
-                <p class="text-neutral-400 text-xs font-light leading-relaxed mt-3 text-center px-2">
-                    Monitored workstation architecture running active desktop process isolation matrix and high-fidelity voice parameters.
-                </p>
-            </div>
-
-            <!-- Specs Matrix Grids -->
-            <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <!-- System Specs -->
-                <div class="bg-neutral-900/20 border border-white/5 rounded-xl p-5">
-                    <div class="flex items-center gap-3 text-white font-medium mb-3">
-                        <i data-lucide="settings" class="w-4 h-4 text-neutral-400"></i>
-                        <span>System Specifications</span>
-                    </div>
-                    <ul class="space-y-1.5 text-sm text-neutral-400 font-light">
-                        <li>• <strong class="text-neutral-300 font-medium">OS:</strong> Windows 11 System</li>
-                        <li>• <strong class="text-neutral-300 font-medium">CPU:</strong> Intel i5-9300H (2.40 GHz)</li>
-                        <li>• <strong class="text-neutral-300 font-medium">RAM:</strong> 12GB Capacity</li>
-                    </ul>
-                </div>
-                <!-- Network Specs -->
-                <div class="bg-neutral-900/20 border border-white/5 rounded-xl p-5">
-                    <div class="flex items-center gap-3 text-white font-medium mb-3">
-                        <i data-lucide="wifi" class="w-4 h-4 text-neutral-400"></i>
-                        <span>Primary Network Link</span>
-                    </div>
-                    <ul class="space-y-1.5 text-sm text-neutral-400 font-light">
-                        <li>• <strong class="text-neutral-300 font-medium">Link:</strong> Starlink Satellite</li>
-                        <li>• <strong class="text-neutral-300 font-medium">Speed:</strong> 100+ Mbps Dn / 25+ Up</li>
-                        <li>• <strong class="text-neutral-300 font-medium">Core:</strong> Wired Ethernet Connection</li>
-                    </ul>
-                </div>
-                <!-- Peripheral Specs -->
-                <div class="bg-neutral-900/20 border border-white/5 rounded-xl p-5">
-                    <div class="flex items-center gap-3 text-white font-medium mb-3">
-                        <i data-lucide="headphones" class="w-4 h-4 text-neutral-400"></i>
-                        <span>Audio Peripherals</span>
-                    </div>
-                    <ul class="space-y-1.5 text-sm text-neutral-400 font-light">
-                        <li>• <strong class="text-neutral-300 font-medium">Hardware:</strong> Onikuma X15 Headset</li>
-                        <li>• <strong class="text-neutral-300 font-medium">Mic:</strong> HD Noise Reduction Microphone</li>
-                    </ul>
-                </div>
-                <!-- Redundancy Specs -->
-                <div class="bg-neutral-900/20 border border-white/5 rounded-xl p-5">
-                    <div class="flex items-center gap-3 text-white font-medium mb-3">
-                        <i data-lucide="battery-charging" class="w-4 h-4 text-neutral-400"></i>
-                        <span>Failover Redundancies</span>
-                    </div>
-                    <ul class="space-y-1.5 text-sm text-neutral-400 font-light">
-                        <li>• <strong class="text-neutral-300 font-medium">Power Backup:</strong> Bluetti EB70 Power Supply</li>
-                        <li>• <strong class="text-neutral-300 font-medium">Backup Net:</strong> Mobile Hotspot Standby</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+        </div> <!-- /RIGHT SIDEBAR CONTAINER -->
+    </div> <!-- /FLEX WRAPPER -->
 </section>
 
         <!-- ================= WORK EXPERIENCE PAGE ================= -->
