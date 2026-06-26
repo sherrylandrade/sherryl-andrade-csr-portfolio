@@ -94,11 +94,14 @@
         </section>
 <!-- ================= ABOUT SECTION ================= -->
         
+<!-- ================= ABOUT SECTION ================= -->
 <section id="page-about" class="page-viewport max-w-7xl mx-auto px-4 pt-4 pb-16">
     
-    <div class="flex flex-col md:flex-row gap-8 items-center">
+    <!-- Using items-start keeps the sticky/centered tracking smooth as content grows -->
+    <div class="flex flex-col md:flex-row gap-12 items-start">
         
-        <div class="w-full md:w-1/4 shrink-0 flex md:justify-center">
+        <!-- 1. LEFT SIDEBAR: Directory Column -->
+        <div class="w-full md:w-1/5 shrink-0 md:sticky md:top-28">
             <nav class="flex flex-col gap-4 text-xs font-mono tracking-wide text-neutral-400">
                 <a href="#about-intro" class="group flex items-center gap-2 text-white font-medium hover:text-white transition-colors">
                     <span class="w-4 h-[1px] bg-white group-hover:w-6 transition-all"></span>
@@ -123,10 +126,12 @@
             </nav>
         </div>
 
-        <div class="w-full md:w-3/4 flex flex-col md:-mt-12">
+        <!-- 2. RIGHT SIDE: Profile Card & Main Subsections content wrapped with uniform space-y-16 for spacing -->
+        <div class="w-full md:w-4/5 flex flex-col space-y-16">
             
+            <!-- Subsection 1: About Intro -->
             <div id="about-intro" class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start scroll-mt-28">
-                
+                <!-- Left Side Profile Metadata Stack -->
                 <div class="flex flex-col items-center text-center">
                     <div class="w-48 h-48 rounded-full bg-gradient-to-b from-neutral-800 to-neutral-950 p-1 border border-white/10 flex items-center justify-center overflow-hidden mb-6 shadow-xl">
                         <img src="avatar.jpg" alt="Sherryl Andrade" class="w-full h-full rounded-full object-cover">
@@ -136,6 +141,7 @@
                     <p class="text-neutral-500 font-medium text-sm">Phone & Email Support</p>
                 </div>
 
+                <!-- Right Side Professional Biography paragraphs -->
                 <div class="lg:col-span-2 space-y-6 lg:pt-4">
                     <div>
                         <span class="text-[10px] font-mono uppercase tracking-widest text-neutral-500 block mb-2">Professional Biography</span>
@@ -144,6 +150,7 @@
                         </p>
                     </div>
 
+                    <!-- Mission & Vision Subgrids -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-white/5">
                         <div>
                             <h4 class="text-white text-xs font-bold flex items-center gap-2 mb-1">
@@ -159,12 +166,7 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-            
-        </div>
-    </div>
-</section>
             
             <hr class="border-white/5">
 
