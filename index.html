@@ -25,7 +25,7 @@
         }
     </script>
     <!-- Inter Font & Lucide Icons via CDN -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #090a0f; color: #f3f4f6; }
@@ -36,7 +36,7 @@
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-accentBlue selection:text-white">
 
-    <!-- FIXED TOP GLOBAL HEADER NAVIGATION -->
+    <!-- GLOBAL HEADER NAVIGATION -->
     <header class="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-darkBg/80 backdrop-blur-md border-b border-white/5">
         <!-- Location Indicator -->
         <div class="text-xs font-medium tracking-wide text-neutral-400 bg-white/5 px-3 py-1.5 rounded-full border border-white/10">
@@ -68,53 +68,33 @@
         </div>
     </header>
 
-    <!-- CONTENT MAIN CONTAINER -->
-    <main class="flex-grow pt-32 pb-16 max-w-6xl w-full mx-auto px-6">
+    <!-- MAIN CONTENT CANVAS -->
+    <main class="flex-grow pt-36 pb-16 max-w-6xl w-full mx-auto px-6">
 
         <!-- ================= HOME PAGE ================= -->
         <section id="page-home" class="page-viewport active">
-            <div class="text-center max-w-3xl mx-auto mt-12">
+            <div class="text-center max-w-3xl mx-auto mt-16">
                 <div class="inline-flex items-center gap-2 text-xs text-accentCyan bg-accentCyan/10 border border-accentCyan/20 rounded-full px-4 py-1.5 mb-8 font-medium tracking-wider uppercase">
-                    Once UI Framework • Master Showcase
+                    My Portfolio
                 </div>
                 <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-8 leading-[1.1]">
                     Building customer trust through phone & email
                 </h1>
-                <p class="text-lg md:text-xl text-neutral-400 font-light leading-relaxed mb-12">
-                    Customer Service Specialist offering highly calibrated multi-channel customer resolution, rapid technical troubleshooting, and high-satisfaction user support.
+                <p class="text-lg md:text-xl text-neutral-400 font-light leading-relaxed mb-12 max-w-2xl mx-auto">
+                    Highly calibrated multi-channel support engineering clear voice resolutions, fast-turnaround documentation answers, and verified client CSAT scores.
                 </p>
                 
                 <button onclick="switchPage('about')" class="inline-flex items-center gap-3 bg-neutral-900 border border-white/10 hover:border-white/20 text-neutral-200 hover:text-white font-medium text-sm px-6 py-3 rounded-full transition-all group shadow-md">
                     <span class="w-2 h-2 rounded-full bg-accentCyan animate-pulse"></span>
-                    About — Sherryl Andrade
+                    Explore Capabilities
                     <i data-lucide="arrow-right" class="w-4 h-4 text-neutral-500 group-hover:translate-x-1 transition-transform"></i>
                 </button>
-            </div>
-
-            <!-- Big Placeholder Core Window -->
-            <div class="mt-24 rounded-2xl overflow-hidden border border-white/5 bg-panelBg shadow-2xl relative group">
-                <div class="absolute inset-0 bg-gradient-to-tr from-accentBlue/10 via-transparent to-purple-500/10 opacity-60"></div>
-                <div class="p-4 border-b border-white/5 flex items-center gap-2 bg-black/40">
-                    <div class="w-2.5 h-2.5 rounded-full bg-neutral-700"></div>
-                    <div class="w-2.5 h-2.5 rounded-full bg-neutral-700"></div>
-                    <div class="w-2.5 h-2.5 rounded-full bg-neutral-700"></div>
-                    <span class="text-xs text-neutral-500 font-mono ml-4">customer_experience_metrics.json</span>
-                </div>
-                <div class="h-80 md:h-[400px] flex items-center justify-center relative p-8">
-                    <div class="text-center z-10">
-                        <i data-lucide="mail" class="w-12 h-12 text-neutral-600 mx-auto mb-4"></i>
-                        <h3 class="text-lg font-semibold text-neutral-300">Omnichannel Ticketing Pipeline</h3>
-                        <p class="text-sm text-neutral-500 max-w-sm mt-1">Live configuration setup optimized for phone, email, and live CRM routing pipelines.</p>
-                    </div>
-                    <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 w-2/3 h-40 bg-accentBlue/20 blur-[80px] rounded-full"></div>
-                </div>
             </div>
         </section>
 
         <!-- ================= ABOUT ME PAGE ================= -->
         <section id="page-about" class="page-viewport">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start mt-4">
-                <!-- Profile Left Column Card -->
                 <div class="md:col-span-1 flex flex-col items-center md:items-start text-center md:text-left">
                     <div class="w-48 h-48 rounded-full bg-gradient-to-b from-neutral-800 to-neutral-950 p-1 border border-white/10 flex items-center justify-center overflow-hidden mb-6">
                         <div class="w-full h-full rounded-full bg-neutral-900 flex items-center justify-center">
@@ -125,7 +105,6 @@
                     <p class="text-neutral-400 mt-1 font-medium text-sm">Customer Service Specialist: Phone & Email Support</p>
                 </div>
 
-                <!-- Canvas Core Information Space -->
                 <div class="md:col-span-2 space-y-12">
                     <div>
                         <h3 class="text-xs font-mono uppercase tracking-widest text-neutral-500 mb-3">Professional Biography</h3>
@@ -134,7 +113,6 @@
                         </p>
                     </div>
 
-                    <!-- Mission & Vision -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 border-t border-white/5 pt-8">
                         <div>
                             <h4 class="text-sm font-semibold text-white flex items-center gap-2 mb-3">
@@ -154,7 +132,6 @@
                         </div>
                     </div>
 
-                    <!-- Core Services -->
                     <div class="border-t border-white/5 pt-8">
                         <h3 class="text-xs font-mono uppercase tracking-widest text-neutral-500 mb-6">Core Services Matrix</h3>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -187,7 +164,7 @@
         <!-- ================= WORK EXPERIENCE PAGE ================= -->
         <section id="page-work" class="page-viewport">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start mt-4">
-                <div class="md:col-span-1 md:sticky md:top-36 space-y-6">
+                <div class="md:col-span-1 md:sticky md:top-36 space-y-4">
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 rounded-full bg-neutral-800 flex items-center justify-center border border-white/10">
                             <i data-lucide="list-ordered" class="w-5 h-5 text-neutral-400"></i>
@@ -202,7 +179,6 @@
                     </p>
                 </div>
 
-                <!-- Core Work Feed -->
                 <div class="md:col-span-2 space-y-4">
                     <!-- Item 1 -->
                     <div class="p-6 rounded-xl bg-panelBg border border-white/5">
@@ -295,25 +271,25 @@
             </div>
         </section>
 
-        <!-- ================= TESTIMONIALS & FEEDBACK PAGE ================= -->
+        <!-- ================= TESTIMONIALS PAGE ================= -->
         <section id="page-testimonials" class="page-viewport">
             <div class="mb-12 max-w-xl">
                 <h2 class="text-3xl font-bold text-white tracking-tight">Performance Evidence</h2>
                 <p class="text-sm text-neutral-400 mt-2 font-light">
-                    Video walk-through endorsement and interactive slider tracking customer validation channels.
+                    Video walk-through endorsement and interactive tracking metric streams.
                 </p>
             </div>
 
-            <!-- Video Player Component Box (URL Configured) -->
+            <!-- Video Player Window Frame -->
             <div class="w-full bg-panelBg rounded-2xl border border-white/5 overflow-hidden shadow-2xl mb-12">
                 <div class="p-4 bg-black/40 border-b border-white/5 flex items-center justify-between">
                     <span class="text-xs font-mono text-neutral-400 flex items-center gap-2">
                         <span class="w-2 h-2 rounded-full bg-accentCyan animate-pulse"></span> Video Overview Endorsement
                     </span>
                 </div>
-                <div class="aspect-video w-full bg-neutral-950 relative">
-                    <!-- REPLACE YOUR VIDEO STREAMS IN THE SRC PARAMETER BELOW -->
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Performance Presentation Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="aspect-video w-full bg-neutral-950 relative flex items-center justify-center">
+                    <!-- Insert Google Drive Embed URL Stream link below directly inside src -->
+                    <iframe class="w-full h-full" src="https://docs.google.com/file/d/YOUR_GOOGLE_DRIVE_VIDEO_ID_HERE/preview" allow="autoplay" allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -331,7 +307,6 @@
                     </div>
                 </div>
 
-                <!-- Slide viewports -->
                 <div class="relative overflow-hidden min-h-[160px]">
                     <!-- Slide 1 -->
                     <div id="testimonial-slide-0" class="testimonial-slide transition-opacity duration-300 block">
@@ -364,39 +339,85 @@
 
         <!-- ================= CONTACT/CTA PAGE ================= -->
         <section id="page-contact" class="page-viewport">
-            <div class="w-full rounded-2xl bg-gradient-to-b from-neutral-900 to-panelBg border border-white/10 p-8 md:p-16 text-center relative overflow-hidden shadow-2xl">
-                <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-80 h-80 bg-accentBlue/10 blur-[120px] rounded-full"></div>
-                
-                <div class="max-w-xl mx-auto relative z-10">
-                    <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">Need help with your phone & email queues?</h2>
-                    <p class="text-sm md:text-base text-neutral-400 font-light mb-8 leading-relaxed">
-                        Ready to establish premium first-contact resolutions, clean up backlogged CRM tickets, and enhance your user CSAT benchmarks. Reach out directly below.
-                    </p>
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-mono text-accentCyan uppercase tracking-widest">Next Steps</span>
+                <h2 class="text-4xl font-bold text-white mt-2 mb-4 tracking-tight">Ready to optimize your support queues?</h2>
+                <p class="text-neutral-400 font-light text-sm max-w-md mx-auto">
+                    Let's streamline your ticket incoming rates, maximize CSAT metrics, and anchor your multi-channel operational delivery. Reach out today.
+                </p>
+            </div>
 
-                    <form onsubmit="event.preventDefault(); alert('Message layer transmitted successfully.');" class="flex flex-col sm:flex-row gap-3 items-stretch max-w-md mx-auto">
-                        <input type="email" required placeholder="Enter your business email..." class="flex-grow px-4 py-3 rounded-xl bg-black/50 border border-white/10 text-white text-sm focus:outline-none focus:border-accentBlue focus:ring-1 focus:ring-accentBlue transition-all">
-                        <button type="submit" class="bg-white text-darkBg hover:bg-neutral-200 text-sm font-semibold px-6 py-3 rounded-xl transition-all whitespace-nowrap">
-                            Contact Specialist
-                        </button>
-                    </form>
+            <!-- Premium Quick Link Integration Grid Grid Matrix -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <!-- LinkedIn Anchor Card -->
+                <a href="https://linkedin.com/in/your-profile-username" target="_blank" class="p-8 rounded-2xl bg-panelBg border border-white/5 hover:border-accentBlue/40 transition-all group flex flex-col items-center text-center shadow-xl">
+                    <div class="w-12 h-12 rounded-xl bg-accentBlue/10 flex items-center justify-center text-accentBlue mb-6 group-hover:scale-105 transition-transform">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-md font-semibold text-white mb-1">Professional Network</h3>
+                    <p class="text-xs text-neutral-500 mb-6">Connect on LinkedIn</p>
+                    <span class="text-xs font-medium text-accentBlue flex items-center gap-1 group-hover:underline">
+                        View Profile <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                    </span>
+                </a>
+
+                <!-- Email Hook Connection Card -->
+                <a href="mailto:your-email@domain.com" class="p-8 rounded-2xl bg-panelBg border border-white/5 hover:border-accentCyan/40 transition-all group flex flex-col items-center text-center shadow-xl">
+                    <div class="w-12 h-12 rounded-xl bg-accentCyan/10 flex items-center justify-center text-accentCyan mb-6 group-hover:scale-105 transition-transform">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-md font-semibold text-white mb-1">Business Inquiries</h3>
+                    <p class="text-xs text-neutral-500 mb-6">Send an Email</p>
+                    <span class="text-xs font-medium text-accentCyan flex items-center gap-1 group-hover:underline">
+                        Write Message <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                    </span>
+                </a>
+
+                <!-- WhatsApp API Immediate Call Card -->
+                <a href="https://wa.me/yourphonenumber" target="_blank" class="p-8 rounded-2xl bg-panelBg border border-white/5 hover:border-emerald-500/40 transition-all group flex flex-col items-center text-center shadow-xl">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-105 transition-transform">
+                        <i data-lucide="phone" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-md font-semibold text-white mb-1">Direct Line</h3>
+                    <p class="text-xs text-neutral-500 mb-6">Call or Message</p>
+                    <span class="text-xs font-medium text-emerald-400 flex items-center gap-1 group-hover:underline">
+                        Open WhatsApp <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Metrics Highlight Bar Footnotes -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-16 pt-8 border-t border-white/5 text-center sm:text-left">
+                <div class="flex flex-col items-center sm:items-start">
+                    <div class="text-accentCyan mb-1"><i data-lucide="zap" class="w-4 h-4"></i></div>
+                    <h4 class="text-sm font-semibold text-white">Proactive Management</h4>
+                    <p class="text-xs text-neutral-500 mt-1">Anticipating workflow patterns before queues spike.</p>
+                </div>
+                <div class="flex flex-col items-center sm:items-start">
+                    <div class="text-accentBlue mb-1"><i data-lucide="shield" class="w-4 h-4"></i></div>
+                    <h4 class="text-sm font-semibold text-white">Absolute Discretion</h4>
+                    <p class="text-xs text-neutral-500 mt-1">Trusted handling of internal platform records and account parameters.</p>
+                </div>
+                <div class="flex flex-col items-center sm:items-start">
+                    <div class="text-purple-400 mb-1"><i data-lucide="check-square" class="w-4 h-4"></i></div>
+                    <h4 class="text-sm font-semibold text-white">Flawless Precision</h4>
+                    <p class="text-xs text-neutral-500 mt-1">Zero missed interaction notes left inside ticketing logs.</p>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- FOOTER ARCHITECTURE -->
+    <!-- FOOTER -->
     <footer class="max-w-6xl w-full mx-auto px-6 py-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-neutral-500 font-mono">
-        <div>© 2026 Sherryl Andrade. Phone & Email Support Specialist.</div>
+        <div>© 2026 Sherryl Andrade. Customer Service Specialist: Phone & Email Support.</div>
         <div class="flex items-center gap-4">
-            <a href="#" class="hover:text-white transition-colors"><i data-lucide="github" class="w-4 h-4"></i></a>
-            <a href="#" class="hover:text-white transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+            <a href="https://linkedin.com/in/your-profile-username" target="_blank" class="hover:text-white transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
         </div>
     </footer>
 
-    <!-- INTERACTIVE VIEWPORT ROUTER & SLIDER SCRIPTS -->
+    <!-- CODE SCRIPT ROUTER AND SLIDER LOOPS -->
     <script>
-        // Tab Page switcher
         function switchPage(pageId) {
             document.querySelectorAll('.page-viewport').forEach(view => view.classList.remove('active'));
             const targetView = document.getElementById(`page-${pageId}`);
@@ -414,7 +435,6 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Testimonial Array Slider System
         let currentSlideIndex = 0;
         const totalSlides = 3;
         const slideTitles = [
@@ -446,7 +466,6 @@
             updateSlideDisplay();
         }
 
-        // Time Engine clock ticker
         function updateSystemClock() {
             const now = new Date();
             document.getElementById('live-clock').textContent = now.toTimeString().split(' ')[0];
