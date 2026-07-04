@@ -256,11 +256,39 @@
         </div>
     </div>
 
-    <!-- RIGHT PANEL: TOOLS CARD WITH INTERNALLY LAYERED GROUPINGS -->
-    <div class="bg-panelBg border border-white/5 rounded-2xl p-6 flex flex-col space-y-5">
+<!-- VERTICALLY STACKED LAYOUT: SKILLS ON TOP OF TOOLS -->
+<div class="flex flex-col gap-6 mt-12 w-full">
+    
+    <!-- TOP SECTION: SKILLS CARD -->
+    <div class="bg-panelBg border border-white/5 rounded-2xl p-6 w-full">
+        <h3 class="font-mono text-xs uppercase tracking-widest text-accentCyan mb-4">Skills</h3>
+        <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 bg-darkBg border border-white/5 rounded-full text-xs text-neutral-300 font-light">Attention to detail</span>
+            <span class="px-3 py-1.5 bg-darkBg border border-white/5 rounded-full text-xs text-neutral-300 font-light">Case handling - Inbound</span>
+            <span class="px-3 py-1.5 bg-darkBg border border-white/5 rounded-full text-xs text-neutral-300 font-light">Case handling - Outbound</span>
+            <span class="px-3 py-1.5 bg-darkBg border border-white/5 rounded-full text-xs text-neutral-300 font-light">Email Support</span>
+            <span class="px-3 py-1.5 bg-darkBg border border-white/5 rounded-full text-xs text-neutral-300 font-light">Customer Management</span>
+            <span class="px-3 py-1.5 bg-darkBg border border-white/5 rounded-full text-xs text-neutral-300 font-light">Customer support</span>
+            <span class="px-3 py-1.5 bg-darkBg border border-white/5 rounded-full text-xs text-neutral-300 font-light">Inbox Support</span>
+            <span class="px-3 py-1.5 bg-darkBg border border-white/5 rounded-full text-xs text-neutral-300 font-light">Inbound call Management</span>
+            <span class="px-3 py-1.5 bg-darkBg border border-white/5 rounded-full text-xs text-neutral-300 font-light">Minutes and Memo management</span>
+            <span class="px-3 py-1.5 bg-darkBg border border-white/5 rounded-full text-xs text-neutral-300 font-light">Leadership</span>
+            <span class="px-3 py-1.5 bg-darkBg border border-white/5 rounded-full text-xs text-neutral-300 font-light">Phone support</span>
+            <span class="px-3 py-1.5 bg-darkBg border border-white/5 rounded-full text-xs text-neutral-300 font-light">Positive Branding</span>
+            <span class="px-3 py-1.5 bg-darkBg border border-white/5 rounded-full text-xs text-neutral-300 font-light">Project Coordinator</span>
+            <span class="px-3 py-1.5 bg-darkBg border border-white/5 rounded-full text-xs text-neutral-300 font-light">Project Documentation</span>
+            <span class="px-3 py-1.5 bg-darkBg border border-white/5 rounded-full text-xs text-neutral-300 font-light">Quality Assurance</span>
+            <span class="px-3 py-1.5 bg-darkBg border border-white/5 rounded-full text-xs text-neutral-300 font-light">Sales</span>
+            <span class="px-3 py-1.5 bg-darkBg border border-white/5 rounded-full text-xs text-neutral-300 font-light">Technical support</span>
+            <span class="px-3 py-1.5 bg-darkBg border border-white/5 rounded-full text-xs text-neutral-300 font-light">Troubleshooting</span>
+        </div>
+    </div>
+
+    <!-- BOTTOM SECTION: TOOLS CARD WITH INTERNAL CATEGORY SEPARATORS -->
+    <div class="bg-panelBg border border-white/5 rounded-2xl p-6 flex flex-col space-y-6 w-full">
         <h3 class="font-mono text-xs uppercase tracking-widest text-accentCyan">Tools</h3>
         
-        <!-- Group 1: Support Platforms & CRMs -->
+        <!-- Category A -->
         <div class="space-y-2">
             <div class="text-[10px] font-mono uppercase tracking-wider text-neutral-500">Support Platforms & CRMs</div>
             <div class="flex flex-wrap gap-2">
@@ -274,7 +302,7 @@
             </div>
         </div>
 
-        <!-- Group 2: Communication Channels -->
+        <!-- Category B -->
         <div class="space-y-2">
             <div class="text-[10px] font-mono uppercase tracking-wider text-neutral-500">Communication</div>
             <div class="flex flex-wrap gap-2">
@@ -287,17 +315,15 @@
             </div>
         </div>
 
-        <!-- Group 3: Productivity & AI Intelligence -->
+        <!-- Category C -->
         <div class="space-y-2">
             <div class="text-[10px] font-mono uppercase tracking-wider text-neutral-500">Productivity & AI</div>
             <div class="flex flex-wrap gap-2">
-                <!-- New Added Core Targets -->
                 <span class="px-2.5 py-1 bg-darkBg border border-accentCyan/20 text-accentCyan rounded-full text-xs font-medium">ClickUp</span>
                 <span class="px-2.5 py-1 bg-darkBg border border-accentCyan/20 text-accentCyan rounded-full text-xs font-medium">Notion</span>
                 <span class="px-2.5 py-1 bg-darkBg border border-white/10 text-white rounded-full text-xs font-light">ChatGPT</span>
                 <span class="px-2.5 py-1 bg-darkBg border border-white/10 text-white rounded-full text-xs font-light">Gemini</span>
                 <span class="px-2.5 py-1 bg-darkBg border border-white/10 text-white rounded-full text-xs font-light">Claude</span>
-                <!-- Existing Legacy Tools -->
                 <span class="px-2.5 py-1 bg-darkBg border border-white/5 rounded-full text-xs text-neutral-400 font-light">Google Workspace</span>
                 <span class="px-2.5 py-1 bg-darkBg border border-white/5 rounded-full text-xs text-neutral-400 font-light">Google Calendar</span>
                 <span class="px-2.5 py-1 bg-darkBg border border-white/5 rounded-full text-xs text-neutral-400 font-light">Drive</span>
