@@ -1133,28 +1133,37 @@
 
         function updateSystemClock() {
             const now = new Date();
-            document.getElementById('live-clock').textContent = now.toTimeString().split(' ')[0];
+            const clockEl = document.getElementById('live-clock');
+            if (clockEl) clockEl.textContent = now.toTimeString().split(' ')[0];
         }
 
-        document.addEventListener("DOMContentLoaded", () => {
-            lucide.createIcons();
-            updateSystemClock();
-            setInterval(updateSystemClock, 1000);
-            
-            // FIXED: Check URL path on refresh. If it has #work, load work. Else default to home.
+        // 1. RUN THIS INSTANTLY (Kills the split-second home-page flash on refresh)
+        function initRouter() {
             if (window.location.hash) {
                 const initialPage = window.location.hash.replace('#', '');
                 switchPage(initialPage);
             } else {
                 switchPage('home');
             }
+        }
+        
+        // Run router instantly as this script tag executes
+        initRouter();
+
+        // 2. RUN NON-VISUAL BACKGROUND JOBS AFTER DOM IS READY
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.lucide) lucide.createIcons();
+            updateSystemClock();
+            setInterval(updateSystemClock, 1000);
+            
+            // Re-run once more to catch navigation button highlighting configurations
+            initRouter();
         });
 
         // Handle browser Back/Forward navigation changes
         window.addEventListener('hashchange', () => {
             if (window.location.hash) {
                 const targetPage = window.location.hash.replace('#', '');
-                // Prevent infinite recursive call loops by only switching if class configuration differs
                 const targetView = document.getElementById(`page-${targetPage}`);
                 if (targetView && !targetView.classList.contains('active')) {
                     switchPage(targetPage);
@@ -1162,3 +1171,5 @@
             }
         });
     </script>
+</body>
+</html>
