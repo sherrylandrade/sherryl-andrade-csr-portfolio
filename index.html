@@ -1073,9 +1073,12 @@
     </div>
 </footer>
 
-    <!-- CODE SCRIPT ROUTER AND SLIDER LOOPS -->
+<!-- CODE SCRIPT ROUTER AND SLIDER LOOPS -->
     <script>
         function switchPage(pageId) {
+            // Update URL hash without causing a page jump
+            window.location.hash = pageId;
+
             document.querySelectorAll('.page-viewport').forEach(view => view.classList.remove('active'));
             const targetView = document.getElementById(`page-${pageId}`);
             if(targetView) targetView.classList.add('active');
@@ -1132,64 +1135,25 @@
             lucide.createIcons();
             updateSystemClock();
             setInterval(updateSystemClock, 1000);
-            switchPage('home');
-        });
-  
-    document.addEventListener("DOMContentLoaded", () => {
-    // 1. Function to switch to the correct section based on a given ID/Hash
-    function showSection(sectionId) {
-        if (!sectionId) return;
-        
-        // Remove the '#' character if present
-        const targetId = sectionId.replace('#', '');
-        
-        // Find the target section element
-        const targetSection = document.getElementById(targetId);
-        
-        if (targetSection) {
-            // Hide all viewport sections (Update selector class to match your structure)
-            document.querySelectorAll('.page-viewport').forEach(section => {
-                section.classList.add('hidden'); // or change display style
-            });
             
-            // Show the active target section
-            targetSection.classList.remove('hidden');
-            
-            // Optional: Update active styling on your navigation links/tabs
-            document.querySelectorAll('nav a, header a').forEach(link => {
-                if (link.getAttribute('href') === `#${targetId}`) {
-                    // Add your active tab CSS classes here (e.g., text-white)
-                    link.classList.add('text-white');
-                } else {
-                    link.classList.remove('text-white');
-                }
-            });
-        }
-    }
-
-    // 2. RUN ON REFRESH: Check if the URL already has a hash (like #work) when loaded
-    if (window.location.hash) {
-        showSection(window.location.hash);
-    }
-
-    // 3. RUN ON CLICK: Intercept nav clicks to update the URL hash smoothly without jumps
-    document.querySelectorAll('nav a, [href^="#"]').forEach(navLink => {
-        navLink.addEventListener('click', (e) => {
-            const href = navLink.getAttribute('href');
-            if (href.startsWith('#')) {
-                e.preventDefault();
-                // Update the browser URL bar so it says /#work
-                window.location.hash = href;
-                showSection(href);
+            // FIXED: Check URL path on refresh. If it has #work, load work. Else default to home.
+            if (window.location.hash) {
+                const initialPage = window.location.hash.replace('#', '');
+                switchPage(initialPage);
+            } else {
+                switchPage('home');
             }
         });
-    });
 
-    // 4. HANDLE BACK/FORWARD BUTTONS: If user goes back or forward, update page
-    window.addEventListener('hashchange', () => {
-        showSection(window.location.hash);
-    });
-});
-</script>
-</body>
-</html>
+        // Handle browser Back/Forward navigation changes
+        window.addEventListener('hashchange', () => {
+            if (window.location.hash) {
+                const targetPage = window.location.hash.replace('#', '');
+                // Prevent infinite recursive call loops by only switching if class configuration differs
+                const targetView = document.getElementById(`page-${targetPage}`);
+                if (targetView && !targetView.classList.contains('active')) {
+                    switchPage(targetPage);
+                }
+            }
+        });
+    </script>
