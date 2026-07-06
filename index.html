@@ -27,12 +27,17 @@
     <!-- Inter Font & Lucide Icons via CDN -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #090a0f; color: #f3f4f6; }
-        .page-viewport { display: none; }
-        .page-viewport.active { display: block; animation: fadeIn 0.3s ease-in-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-    </style>
+<style>
+    body { font-family: 'Inter', sans-serif; background-color: #090a0f; color: #f3f4f6; }
+    
+    /* Keep your default display state setup */
+    .page-viewport { display: none; }
+    
+    /* FIXED: Added !important here to forcefully overwrite Tailwind's "hidden" class instantly */
+    .page-viewport.active { display: block !important; animation: fadeIn 0.3s ease-in-out; }
+    
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+</style>
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-accentCyan-900/90 selection:text-white">
 
